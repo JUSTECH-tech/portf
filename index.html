@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel • Front-End Developer</title>
+  
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Frontend Developer portfolio: projects, skills, blog, and contact." />
+  <meta name="keywords" content="Frontend, Developer, HTML, CSS, JavaScript, React, Vue, Portfolio" />
+  <meta property="og:title" content="Daniel • Front-End Developer" />
+  <meta property="og:description" content="Explore projects, skills, and get in touch." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-preview.png" />
+  <meta property="og:url" content="https://your-domain.com" />
+  <link rel="canonical" href="https://your-domain.com" />
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true"><div class="loader" aria-label="Loading"></div></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Home"><span class="logo"> <img src="IMG_5969.JPG" alt=""></span> Daniel</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="toggle" aria-label="Toggle theme"><i class='bx bx-moon'></i><span class="hide-sm">Theme</span></button>
+        <label class="color-picker" title="Pick primary color"><i class='bx bx-palette'></i><input id="colorPick" type="color" value="#6c5ce7"></label>
+        <button id="langToggle" class="lang" aria-label="Switch language">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><i class='bx bx-menu'></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="container hero-grid">
+      <div>
+        <div class="kudos">
+          <span class="chip">HNG Intern • Stage 13</span>
+          <span class="chip">Open to Work</span>
+          <span class="chip">Remote:FullTime / Lagos</span>
+        </div>
+        <h1 class="title reveal">Hi, I'm Daniel 👋</h1>
+        <h2 class="typing" id="typing" aria-live="polite">Frontend Developer | UI Designer</h2>
+        <p class="intro mb-16">I build fast, accessible, and delightful web experiences using HTML, CSS, JavaScript, and modern frameworks like React js php,typscript and many more.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects"><i class='bx bx-rocket'></i> View Projects</a>
+          <button class="btn" id="hireMe"><i class='bx bx-message-dots'></i> Hire Me</button>
+          <a class="btn" id="downloadCV" download href="/Oloyede Daniel.pdf"><i class='bx bx-download'></i> Resume</a>
+          <a class="btn" id="downloadVCard" download href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ADaniel%3B%0AFN%3ADaniel%20O.%0AEMAIL%3Ayou%40mail.com%0ATEL%3A%2B234-000-0000%0AURL%3Ahttps%3A%2F%2Fyour-domain.com%0AEND%3AVCARD"><i class='bx bxs-contact'></i> vCard</a>
+        </div>
+        <div class="floating-cta" aria-label="Quick contact">
+          <a href="https://wa.me/qr/GYHFKLFV7XLRE1" title="WhatsApp" target="_blank" rel="noreferrer"><i class='bx bxl-whatsapp'></i></a>
+          <a href="oloyededaniel628@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+          <a href="https://github.com/JUSTECH-tech" target="_blank" rel="noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/oloyede-daniel-659429260?trk=contact-info" target="_blank" rel="noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+      <div class="center reveal">
+        <img src="IMG_4140.JPG" class="center" alt="Daniel portrait" loading="eager" width="560" height="400" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About + Timeline + Counters -->
+  <section id="about">
+    <div class="container">
+      <div class="glass">
+        <div class="container" style="padding:22px">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-sub">Passionate about crafting responsive UIs, performance, and pixel-perfect details.</p>
+          <div class="about-grid">
+            <div class="bio reveal">
+              <p>Detail-oriented and adaptive front-end developer with a strong foundation in BackEnd. Proven ability to build scalable, user-centric 
+                 applications using modern JavaScript frameworks. Experienced in cross-functional 
+                 collaboration, data-driven project execution, and client-focused solutions. Passionate about 
+                 blending business insight with technical innovation to drive results.. Experienced in cross-functional 
+                 collaboration, data-driven project execution, and client-focused solutions.</p>
+              <ul>
+                <li>🎯 Focus: Performance, Accessibility, DX</li>
+                <li>🛠️ FrontEnd Stack: HTML, CSS, JS, React, Vue</li>
+                <li>🛠️ BackEnd Stack: Node.js, Express, Django, FastAPI</li>
+                <li>🛠️ Database: PostgreSQL, MongoDB, Firebase</li>
+                <li>🛠️ Tools: Git, Docker, CI/CD, AWS, Figma(UI/UX)</li>
+                <li>🌍 Languages: HTML5,CSS,JAVASCRIPT,PYTHON,JAVA,C++</li>
+              </ul>
+            </div>
+            <div class="timeline reveal">
+              <div class="item"><span class="bullet"></span><div><strong>2025</strong> – HNG Internship, Frontend</div></div>
+              <div class="item"><span class="bullet"></span><div><strong>2024</strong> – Udemy SoftWare Developemt Course</div></div>
+              <div class="item"><span class="bullet"></span><div><strong>2023</strong> – Started building modern web apps for organisations</div></div>              
+              <div class="item"><span class="bullet"></span><div><strong>2022</strong> – Started building modern apps</div></div>
+            </div>
+          </div>
+          <div class="counters reveal">
+            <div class="counter"><h3 data-target="24">0</h3><p class="muted">Projects</p></div>
+            <div class="counter"><h3 data-target="12">0</h3><p class="muted">Happy Clients</p></div>
+            <div class="counter"><h3 data-target="3">0</h3><p class="muted">Years Experience</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="glass">
+        <div class="container" style="padding:22px">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-sub">My Skills</p>
+          <div class="skills">
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-html5' style="font-size:28px"></i><strong>HTML</strong></div><div class="bar"><span style="--w:95%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-css3' style="font-size:28px"></i><strong>CSS</strong></div><div class="bar"><span style="--w:92%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-javascript' style="font-size:28px"></i><strong>JavaScript</strong></div><div class="bar"><span style="--w:88%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-react' style="font-size:28px"></i><strong>React</strong></div><div class="bar"><span style="--w:85%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-php' style="font-size:28px"></i><strong>PHP</strong></div><div class="bar"><span style="--w:70%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-nodejs' style="font-size:28px"></i><strong>NodeJS</strong></div><div class="bar"><span style="--w:80%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-java' style="font-size:28px"></i><strong>Java</strong></div><div class="bar"><span style="--w:80%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-css3' style="font-size:28px"></i><strong>Tailwind CSS</strong></div><div class="bar"><span style="--w:80%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bx-palette' style="font-size:28px"></i><strong>UI/UX</strong></div><div class="bar"><span style="--w:80%"></span></div></div>
+            <div class="skill reveal"><div style="display:flex;align-items:center;gap:10px"><i class='bx bxl-vuejs' style="font-size:28px"></i><strong>Vue.js</strong></div><div class="bar"><span style="--w:80%"></span></div></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="glass" style="padding:22px">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Little Of My Projects.</p>
+        <div class="filter" id="filter">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="web">Web Apps</button>
+          <button data-filter="ui">UI Designs</button>
+          <button data-filter="games">Games</button>
+        </div>
+        <div class="projects" id="gallery">
+          <!-- Card 1 -->
+          <article class="card reveal" data-cat="web">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=900&auto=format&fit=crop" alt="Dashboard app" loading="lazy">
+                <div class="overlay">Analytics Dashboard</div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>Analytics Dashboard</h3>
+                  <p class="muted">React + Chart.js real-time dashboard with auth.</p>
+                  <div class="tags"><span class="tag">React</span><span class="tag">Node</span><span class="tag">Charts</span></div>
+                </div>
+                <div class="actions">
+                  <a class="btn" href="#" data-modal='{"title":"Analytics Dashboard","desc":"Real-time metrics, role-based access, and responsive charts.","tech":"React, Node, WebSockets","imgs":["https://images.unsplash.com/photo-1551281044-8b89adfbe3be?q=80&w=1200&auto=format&fit=crop"]}'>Details</a>
+                  <a class="btn primary" href="https://justech-tech.github.io/dashboard/t" target="_blank" rel="noreferrer">link</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="card reveal" data-cat="games">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="IMG_3207.JPG" alt="Game" loading="lazy">
+                <div class="overlay">Color Guessing Game</div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>Color Guessing Game</h3>
+                  <p class="muted">Multiplayer mode, power-ups, leaderboard.</p>
+                  <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+                </div>
+                <div class="actions">
+                  <button class="btn" data-modal='{"title":"Color Guessing Game","desc":"Real-time multiplayer with AI opponent.","tech":"Vanilla JS, WebSocket","imgs":["https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop"]}'>Details</button>
+                  <a class="btn primary" href="https://justech-tech.github.io/color/">Live</a>
+                </div>
+              </div>
+            </div>
+          </article>
+           <!-- Card 3 -->
+          <article class="card reveal" data-cat="games">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="IMG_3123.JPG" alt="Church" loading="lazy">
+                <div class="overlay">Church Website</div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>Church Website</h3>
+                  <p class="muted">GOD IS GOOD</p>
+                  <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+                </div>
+                <div class="actions">
+                  <button class="btn" data-modal='{"title":"Color Guessing Game","desc":"Real-time multiplayer with AI opponent.","tech":"Vanilla JS, WebSocket","imgs":["https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop"]}'>Details</button>
+                  <a class="btn primary" href="https://justech-tech.github.io/churchxlit/">Live</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article class="card reveal" data-cat="games">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="IMG_3213.JPG" alt="Game" loading="lazy">
+                <div class="overlay">E-commerce Website</div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>E-commerce Website</h3>
+                  <p class="muted">Real Items</p>
+                  <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+                </div>
+                <div class="actions">
+                  <button class="btn" data-modal='{"title":"Color Guessing Game","desc":"Real-time multiplayer with AI opponent.","tech":"Vanilla JS, WebSocket","imgs":["https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop"]}'>Details</button>
+                  <a class="btn primary" href="https://justech-tech.github.io/e-commerce/">Live</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 5 -->
+          <article class="card reveal" data-cat="games">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=900&auto=format&fit=crop" alt="Game" loading="lazy">
+                <div class="overlay">Calculator</div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>Calculator</h3>
+                  <p class="muted">Calculator</p>
+                  <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+                </div>
+                <div class="actions">
+                  <button class="btn" data-modal='{"title":"Color Guessing Game","desc":"Real-time multiplayer with AI opponent.","tech":"Vanilla JS, WebSocket","imgs":["https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop"]}'>Details</button>
+                  <a class="btn primary" href="https://justech-tech.github.io/calculator/">Live</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Card 6 -->
+          <article class="card reveal" data-cat="games">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="IMG_3227.JPG" alt="Game" loading="lazy">
+                <div class="overlay">Room</div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>ROOM</h3>
+                  <p class="muted">ROOM</p>
+                  <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+                </div>
+                <div class="actions">
+                  <button class="btn" data-modal='{"title":"Color Guessing Game","desc":"Real-time multiplayer with AI opponent.","tech":"Vanilla JS, WebSocket","imgs":["https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop"]}'>Details</button>
+                  <a class="btn primary" href="https://justech-tech.github.io/hover-animation/">Live</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="glass" style="padding:22px">
+        <h2 class="section-title">Testimonials From My Clients</h2>
+        <div class="slider" aria-roledescription="carousel">
+          <div class="slides" id="slides">
+            <div class="slide">
+              <div class="post">
+                <p>“Daniel delivered our dashboard ahead of schedule with excellent performance optimizations.”</p>
+                <p class="muted">— CEO of oando company LAGOS</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="post">
+                <p>“Clean code, great communication, and fantastic UI details.”</p>
+                <p class="muted">— Dr afred maschal</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="post">
+                <p>“He turned our designs into a responsive app that our users love.”</p>
+                <p class="muted">— Banky W</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="post">
+                <p>“I so much love your work DAN you made clean and usable work.”</p>
+                <p class="muted">— Jame Otedola:Bank Manager</p>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn" id="prev"><i class='bx bx-left-arrow-alt'></i></button>
+            <button class="btn" id="next"><i class='bx bx-right-arrow-alt'></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog / Case studies -->
+  <section id="blog">
+    <div class="container">
+      <div class="glass" style="padding:22px">
+        <h2 class="section-title">Blog & Case Studies</h2>
+        <p class="section-sub">Short write-ups about how projects were built.</p>
+        <div class="blog">
+          <article class="post reveal">
+            <h3>Optimizing Core Web Vitals</h3>
+            <p class="muted">A guide on image optimization, lazy loading, and code-splitting.</p>
+            <a class="btn" href="#">Read</a>
+          </article>
+          <article class="post reveal">
+            <h3>Design Systems for Speed</h3>
+            <p class="muted">How tokens and components boost delivery.</p>
+            <a class="btn" href="#">Read</a>
+          </article>
+          <article class="post reveal">
+            <h3>Accessibility Wins</h3>
+            <p class="muted">Small improvements that help everyone.</p>
+            <a class="btn" href="#">Read</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="glass" style="padding:22px">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <input id="name" name="name" type="text" placeholder=" " required />
+              <label for="name">Name</label>
+            </div>
+            <div class="field">
+              <input id="email" name="email" type="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+            <div class="field">
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button class="btn primary" type="submit"><i class='bx bx-send'></i> Send</button>
+          </form>
+          <div class="post">
+            <h3>Let's work together</h3>
+            <p class="muted">Have a project in mind? I'm available for freelance and full-time roles.</p>
+            <ul>
+              <li><i class='bx bx-map'></i> Lagos, Nigeria</li>
+              <li><i class='bx bx-envelope'></i> oloyededaniel628@gmail.com</li>
+              <li><i class='bx bx-link'></i> your-domain.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="center" style="padding:30px 0;color:var(--muted)">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <span>© <span id="year"></span> Daniel. All rights reserved.</span>
+      <div style="display:flex;gap:12px;align-items:center">
+        <label style="display:flex;align-items:center;gap:8px" title="Toggle background audio"><input type="checkbox" id="audioToggle" /> Soft Music</label>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals & Toasts -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <h3 id="modalTitle">Project</h3>
+        <button class="btn" id="closeModal" aria-label="Close"><i class='bx bx-x'></i></button>
+      </div>
+      <p id="modalDesc" class="muted"></p>
+      <div id="modalImgs" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px"></div>
+      <p class="muted" id="modalTech" style="margin-top:12px"></p>
+    </div>
+  </div>
+  <div id="toast" style="position:fixed;right:16px;top:16px;padding:12px 14px;border-radius:12px;background:var(--bg-soft);color:var(--text);border:1px solid var(--border);box-shadow:var(--shadow);opacity:0;transform:translateY(-10px);transition:.25s;z-index:1002"></div>
+
+  <!-- ScrollTop -->
+  <button id="scrollTop" aria-label="Scroll to top"><i class='bx bx-chevron-up'></i></button>
+
+  <!-- Audio -->
+  <audio id="bgAudio" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/23/audio_7a1f3c2cc6.mp3?filename=soft-ambient-124841.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
