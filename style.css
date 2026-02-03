@@ -283,28 +283,35 @@
         gap:16px;
         padding:22px;
     }
-    .skill{
-        padding:16px;
-        border:1px solid var(--border);
-        border-radius:16px;
-        background:var(--card);
-        position:relative;
-        overflow:hidden}
-    .skill .bar{
-        height:8px;
-        background:rgba(255,255,255,0.12);
-        border-radius:999px;
-        margin-top:10px;
-    }
-    .skill .bar > span{
-        display:block;
-        height:100%;
-        width:var(--w);
-        background: linear-gradient(90deg, var(--primary), #22d3ee);
-        border-radius:999px;
-        transition: width 1s ease;
-        animation: grow 1.5s ease forwards;
-    }
+    
+
+    .skills:hover{
+  transform:translateY(-5px);
+}
+  
+    .skills .bar{
+  height:8px;
+  background:rgba(255,255,255,0.12);
+  border-radius:999px;
+  margin-top:10px;
+  overflow:hidden;
+}
+
+.skills .bar span{
+  display:block;
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,var(--primary),#22d3ee);
+  border-radius:999px;
+  transition:width 1.2s ease;
+}
+
+
+    .skills .bar > span{
+  display:block;
+  height:100%;
+  width:var(--w);
+}
 
     @keyframes grow{
         from{width:0}
@@ -479,16 +486,7 @@
     }
 
     /* Utilities */
-    .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all .8s cubic-bezier(.2,.65,.3,1);
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+    
 
     .center{
         display:grid;
@@ -708,3 +706,142 @@ section {
 
 }
 
+
+/* ---------------- About Section ---------------- */
+#about .glass {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Section Title */
+#about .section-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+#about .section-sub {
+  text-align: center;
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* About Grid */
+#about .about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#about .bio p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+#about .bio ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+#about .bio ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+/* Timeline */
+#about .timeline {
+  border-left: 2px solid var(--primary);
+  padding-left: 16px;
+}
+
+#about .timeline .item {
+  position: relative;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#about .timeline .bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* Counters */
+#about .counters {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#about .counter {
+  flex: 1 1 30%;
+  padding: 16px;
+  text-align: center;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#about .counter:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+#about .counter h3 {
+  font-size: 32px;
+  margin: 0;
+  color: var(--primary);
+}
+
+#about .counter p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (min-width: 768px) {
+  #about .about-grid {
+    flex-direction: row;
+    gap: 40px;
+  }
+  
+  #about .bio, 
+  #about .timeline {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  #about .section-title {
+    font-size: 22px;
+  }
+
+  #about .section-sub {
+    font-size: 14px;
+  }
+
+  #about .counter h3 {
+    font-size: 24px;
+  }
+
+  #about .counters {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
