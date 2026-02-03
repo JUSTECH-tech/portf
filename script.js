@@ -35,6 +35,14 @@
     const savedColor = localStorage.getItem('primary');
     if(savedColor) root.style.setProperty('--primary', savedColor);
 
+    qs('#themeToggle').onclick = () => {
+      const isLight = document.documentElement.getAttribute('data-theme')==='light';
+      document.documentElement.setAttribute('data-theme', isLight? 'dark':'light');
+      localStorage.setItem('theme', isLight? 'dark':'light');
+      qs('#themeToggle').innerHTML = isLight? "<i class='bx bx-sun'></i><span class=\"hide-sm\"></span>" : "<i class='bx bx-moon'></i><span class=\"hide-sm\"></span>";
+    }
+    qs('#colorPick').addEventListener('input', (e)=>{ root.style.setProperty('--primary', e.target.value); localStorage.setItem('primary', e.target.value) });
+
     // ===== Typing animation =====
     const phrases = ["FrontEnd Developer","BackEnd Developer", "UI Designer", "Web Developer", "Open Source Lover"];
     let pi=0, ci=0, del=false; const el=qs('#typing');

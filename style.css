@@ -130,12 +130,14 @@
     }
     .controls{
         display:flex;
-        align-items:center;gap:10px;
+        align-items:center;
+        gap:10px;
     }
     .toggle, .color-picker, .lang{
         display:inline-flex;
         align-items:center;
-        gap:8px;border:1px solid var(--border);
+        gap:8px;
+        border:1px solid var(--border);
         padding:6px 10px;
         border-radius:999px;
         background:var(--card);
@@ -149,6 +151,78 @@
         padding:0;
     }
     
+    /* Portrait inside #home */
+#home .center img {
+  border-radius: 200px;
+  max-width: 100%;
+  width: 560px;
+  height: 50;
+  border: 2px solid var(--border);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  transform: scale(0.95) rotate(0deg);
+  opacity: 0;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  filter: drop-shadow(0 0 2px var(--primary));
+  position: relative;
+  z-index: 0;
+}
+
+/* Reveal + animation on scroll */
+#home .center.reveal.show img {
+  opacity: 1;
+  animation: floatGlowAura 6s ease-in-out infinite;
+}
+
+/* Hover effect: zoom + rotate + stronger aura */
+#home .center img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  animation: floatGlowAuraHover 3s ease-in-out infinite;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.4);
+}
+
+/* Ultra-smooth float + glow + aura */
+@keyframes floatGlowAura {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 2px var(--primary)) drop-shadow(0 0 20px rgba(0,200,255,0.2));
+  }
+  25% {
+    transform: translateY(-6px) rotate(-1deg) scale(1.01);
+    filter: drop-shadow(0 0 10px var(--primary)) drop-shadow(0 0 25px rgba(0,200,255,0.3));
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg) scale(1.02);
+    filter: drop-shadow(0 0 15px var(--primary)) drop-shadow(0 0 40px rgba(0,200,255,0.4));
+  }
+  75% {
+    transform: translateY(-6px) rotate(-1deg) scale(1.01);
+    filter: drop-shadow(0 0 10px var(--primary)) drop-shadow(0 0 25px rgba(0,200,255,0.3));
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 2px var(--primary)) drop-shadow(0 0 20px rgba(0,200,255,0.2));
+  }
+}
+
+/* Hover animation: intensified aura + subtle pulse */
+@keyframes floatGlowAuraHover {
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg) scale(1.08);
+    filter: drop-shadow(0 0 25px var(--primary)) drop-shadow(0 0 50px rgba(0,200,255,0.5));
+  }
+  50% {
+    transform: translateY(-8px) rotate(-0.5deg) scale(1.1);
+    filter: drop-shadow(0 0 35px var(--primary)) drop-shadow(0 0 60px rgba(0,200,255,0.6));
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  #home .center img {
+    width: 90%;
+  }
+}
+
 
     /* Hero */
     .hero{
