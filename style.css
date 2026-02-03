@@ -814,6 +814,19 @@ section {
   font-size: 0.9rem;
 }
 
+
+#about .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#about .reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* ---------------- Responsive ---------------- */
 @media (min-width: 768px) {
   #about .about-grid {

@@ -35,14 +35,6 @@
     const savedColor = localStorage.getItem('primary');
     if(savedColor) root.style.setProperty('--primary', savedColor);
 
-    qs('#themeToggle').onclick = () => {
-      const isLight = document.documentElement.getAttribute('data-theme')==='light';
-      document.documentElement.setAttribute('data-theme', isLight? 'dark':'light');
-      localStorage.setItem('theme', isLight? 'dark':'light');
-      qs('#themeToggle').innerHTML = isLight? "<i class='bx bx-sun'></i><span class=\"hide-sm\">Theme</span>" : "<i class='bx bx-moon'></i><span class=\"hide-sm\">Theme</span>";
-    }
-    qs('#colorPick').addEventListener('input', (e)=>{ root.style.setProperty('--primary', e.target.value); localStorage.setItem('primary', e.target.value) });
-
     // ===== Typing animation =====
     const phrases = ["FrontEnd Developer","BackEnd Developer", "UI Designer", "Web Developer", "Open Source Lover"];
     let pi=0, ci=0, del=false; const el=qs('#typing');
@@ -147,3 +139,30 @@
         else toast('Try: about / projects / contact');
       }
     }
+
+    // Smooth bounce animation for counters
+qsa('#about .counter h3').forEach(n => {
+  const original = n.textContent;
+  n.style.transition = 'transform 0.15s ease';
+  let stepBounce = () => {
+    n.style.transform = 'scale(1.2)';
+    setTimeout(()=> n.style.transform = 'scale(1)', 120);
+  };
+  const observer = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if(e.isIntersecting){
+        let tgt = +n.dataset.target;
+        let c=0;
+        const step = Math.max(1, Math.round(tgt/60));
+        const iv = setInterval(()=>{
+          c += step;
+          if(c >= tgt){ c = tgt; clearInterval(iv); }
+          n.textContent = c;
+          stepBounce();
+        }, 20);
+        observer.unobserve(n);
+      }
+    });
+  }, {threshold: 0.5});
+  observer.observe(n);
+});
