@@ -67,7 +67,7 @@
         </div>
         <h1 class="title reveal">Hi, I'm Daniel 👋</h1>
         <h2 class="typing" id="typing" aria-live="polite">Frontend Developer | UI Designer</h2>
-        <p class="intro mb-16">I build fast, accessible, and delightful web experiences using HTML, CSS, JavaScript, and modern frameworks like React js php,typscript and many more.</p>
+        <p class="intro mb-16">I build fast, accessible, and delightful web experiences using HTML, CSS, JavaScript, and modern frameworks like React, PHP, Typscript and more.</p>
         <div class="cta">
           <a class="btn primary" href="#projects"><i class='bx bx-rocket'></i> View Projects</a>
           <button class="btn" id="hireMe"><i class='bx bx-message-dots'></i> Hire Me</button>
@@ -76,7 +76,7 @@
         </div>
         <div class="floating-cta" aria-label="Quick contact">
           <a href="https://wa.me/qr/GYHFKLFV7XLRE1" title="WhatsApp" target="_blank" rel="noreferrer"><i class='bx bxl-whatsapp'></i></a>
-          <a href="oloyededaniel628@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+          <a href="mailto:oloyededaniel628@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
           <a href="https://github.com/JUSTECH-tech" target="_blank" rel="noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
           <a href="https://www.linkedin.com/in/oloyede-daniel-659429260?trk=contact-info" target="_blank" rel="noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
         </div>
@@ -90,8 +90,7 @@
   <!-- About + Timeline + Counters -->
   <section id="about">
     <div class="container">
-      <div class="glass">
-        <div class="container" style="padding:22px">
+        <div class="glass" style="padding:22px">
           <h2 class="section-title">About Me</h2>
           <p class="section-sub">Passionate about crafting responsive UIs, performance, and pixel-perfect details.</p>
           <div class="about-grid">
@@ -99,8 +98,7 @@
               <p>Detail-oriented and adaptive front-end developer with a strong foundation in BackEnd. Proven ability to build scalable, user-centric 
                  applications using modern JavaScript frameworks. Experienced in cross-functional 
                  collaboration, data-driven project execution, and client-focused solutions. Passionate about 
-                 blending business insight with technical innovation to drive results.. Experienced in cross-functional 
-                 collaboration, data-driven project execution, and client-focused solutions.</p>
+                 blending business insight with technical innovation to drive results.., data-driven project execution, and client-focused solutions.</p>
               <ul>
                 <li>🎯 Focus: Performance, Accessibility, DX</li>
                 <li>🛠️ FrontEnd Stack: HTML, CSS, JS, React, Vue</li>
@@ -361,48 +359,68 @@
 
   <!-- Contact -->
   <section id="contact">
-    <div class="container">
-      <div class="glass" style="padding:22px">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-grid">
-          <form class="form" id="contactForm" novalidate>
-            <div class="field">
-              <input id="name" name="name" type="text" placeholder=" " required />
-              <label for="name">Name</label>
-            </div>
-            <div class="field">
-              <input id="email" name="email" type="email" placeholder=" " required />
-              <label for="email">Email</label>
-            </div>
-            <div class="field">
-              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-              <label for="message">Message</label>
-            </div>
-            <button class="btn primary" type="submit"><i class='bx bx-send'></i> Send</button>
-          </form>
-          <div class="post">
-            <h3>Let's work together</h3>
-            <p class="muted">Have a project in mind? I'm available for freelance and full-time roles.</p>
-            <ul>
-              <li><i class='bx bx-map'></i> Lagos, Nigeria</li>
-              <li><i class='bx bx-envelope'></i> oloyededaniel628@gmail.com</li>
-              <li><i class='bx bx-link'></i> your-domain.com</li>
-            </ul>
+  <div class="container">
+    <div class="glass contact-wrap">
+
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-grid">
+
+        <form class="form" id="contactForm" novalidate>
+
+          <div class="field">
+            <input id="name" name="name" type="text" required />
+            <label for="name">Name</label>
           </div>
+
+          <div class="field">
+            <input id="email" name="email" type="email" required />
+            <label for="email">Email</label>
+          </div>
+
+          <div class="field">
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message</label>
+          </div>
+
+          <button class="btn primary" type="submit">
+            <i class='bx bx-send'></i> Send
+          </button>
+
+        </form>
+
+        <div class="post contact-info">
+          <h3>Let's work together</h3>
+          <p class="muted">
+            Have a project in mind? I'm available for freelance and full-time roles.
+          </p>
+
+          <ul>
+            <li><i class='bx bx-map'></i> Lagos, Nigeria</li>
+            <li><i class='bx bx-envelope'></i> oloyededaniel628@gmail.com</li>
+            <li><i class='bx bx-link'></i> your-domain.com</li>
+          </ul>
         </div>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
-  <footer class="center" style="padding:30px 0;color:var(--muted)">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <span>© <span id="year"></span> Daniel. All rights reserved.</span>
-      <div style="display:flex;gap:12px;align-items:center">
-        <label style="display:flex;align-items:center;gap:8px" title="Toggle background audio"><input type="checkbox" id="audioToggle" /> Soft Music</label>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer">
+  <div class="container footer-wrap">
+
+    <span>© <span id="year"></span> Daniel. All rights reserved.</span>
+
+    <label class="audio-toggle" title="Toggle background audio">
+      <input type="checkbox" id="audioToggle" /> Soft Music
+    </label>
+
+  </div>
+</footer>
+
 
   <!-- Modals & Toasts -->
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
